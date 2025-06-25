@@ -11,7 +11,7 @@ const page = () => {
     title: "",
     description: "",
     category: "Startup",
-    author: "Alex Bennett",
+    author: "Abhiraj Yadav",
     authorImg: "/author_img.png",
   });
 
@@ -41,7 +41,7 @@ const page = () => {
         title: "",
         description: "",
         category: "Startup",
-        author: "Alex Bennett",
+        author: "Abhiraj Yadav",
         authorImg: "/author_img.png",
       });
     } else {
