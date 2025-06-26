@@ -22,8 +22,11 @@ const BlogItem = ({ title, description, image, category, id }) => {
         <h5 className="mb-2 text-lg font-medium tracking-tight text-gray-900">
           {title}
         </h5>
-        <p className="mb-3 text-sm tracking-tight text-gray-700">
-          {description}
+        <p
+          className="mb-3 text-sm tracking-tight text-gray-700"
+          dangerouslySetInnerHTML={{ __html: description.slice(0, 120) }}
+        >
+          {/* {description} */}
         </p>
         <Link
           href={`/blogs/${id}`}

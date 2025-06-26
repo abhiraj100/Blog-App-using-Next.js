@@ -45,7 +45,7 @@ const page = ({ params }) => {
             {data.title}
           </h1>
           <Image
-            src={data.author_img}
+            src={data.authorImg ? data.authorImg : data.author_img}
             alt=""
             width={60}
             height={60}
@@ -65,7 +65,14 @@ const page = ({ params }) => {
           height={720}
           className="border-4 border-white"
         />
-        <h1 className="my-8 text-[26px] font-semibold">Introduction : </h1>
+        <div
+          className="blog-content"
+          dangerouslySetInnerHTML={{ __html: data.description }}
+        >
+          {/* <p>{data.description}</p> */}
+        </div>
+
+        {/* <h1 className="my-8 text-[26px] font-semibold">Introduction : </h1>
         <p>{data.description}</p>
         <h3 className="my-5 text-[18px] font-semibold">
           Step 1 : Self-Reflection and Goal Setting
@@ -104,7 +111,7 @@ const page = ({ params }) => {
         <p className="my-3">
           The purpose of life is not to be happy. It is to be useful, to be
           honorable, to be compassionate.
-        </p>
+        </p> */}
 
         <div className="my-24">
           <p className="text-black font-semibold my-4">
